@@ -4,7 +4,7 @@ A  smart webcam in JavaScript with a pre-trained Machine Learning model.
 ---
 
 ## Introduction
-This repository contains the code useful to publish a web API to take advantage of the webcam to perform object recognition. The model is a pretrained model ([coco-ssd](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd))deployed in [tensorflowjs](https://www.tensorflow.org/js/models).
+This repository contains the code useful to publish a web API to take advantage of the webcam to perform object recognition. The model is a pretrained model ([coco-ssd](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd)) deployed in [tensorflowjs](https://www.tensorflow.org/js/models).
 
 ### The model
 
