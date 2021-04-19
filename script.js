@@ -2,6 +2,9 @@ const video = document.getElementById('webcam');
 const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
 const enableWebcamButton = document.getElementById('webcamButton');
+// Store the resulting model in the global scope of our app.
+var model = undefined;
+var children = [];
 
 // Check if webcam access is supported.
 function getUserMediaSupported() {
@@ -40,9 +43,6 @@ function enableCam(event) {
   });
 }
 
-// Store the resulting model in the global scope of our app.
-var model = undefined;
-
 // Before we can use COCO-SSD class we must wait for it to finish
 // loading. Machine Learning models can be large and take a moment
 // to get everything needed to run.
@@ -53,8 +53,6 @@ cocoSsd.load().then(function (loadedModel) {
   // Show demo section now model is ready to use.
   demosSection.classList.remove('invisible');
 });
-
-var children = [];
 
 function predictWebcam() {
   // Now let's start classifying a frame in the stream.
